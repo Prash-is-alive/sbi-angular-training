@@ -1,0 +1,25 @@
+<form [formGroup] = "bookingForm" (ngSubmit)="submit()">
+    <div>
+        <label>Contact Person's Name</label>
+        <input formControlName="contactPersonName" />
+    </div>
+    <div>
+        <label>Mobile Number</label>
+        <input formControlName="mobileNumber" />
+    </div>
+    <button type="button" (click)="addPassenger()">+</button>
+    <div formArrayName="passengers" *ngFor="let passengerForm of passengers.controls; let i = index">
+        <div [formGroupName]="i">
+            <div>
+                <label>Passenger Name</label>
+                <input formControlName="name" />
+            </div>
+            <div>
+                <label>Gender</label>
+                <input type="radio" formControlName="gender" value="M" /> Male
+                <input type="radio" formControlName="gender" value="F" /> Female
+            </div>
+        </div>
+    </div>
+    <button type="submit">Register</button>
+</form>

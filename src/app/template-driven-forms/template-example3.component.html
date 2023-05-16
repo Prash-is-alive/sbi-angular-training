@@ -1,0 +1,13 @@
+<form #myForm="ngForm" (ngSubmit)="process(myForm)">
+<!-- <form #myForm="ngForm" (ngSubmit)="myForm.valid && process(myForm)"> -->
+    Enter name : 
+        <input type="text" #personName="ngModel" [(ngModel)]="name" name="name" minlength="3" /> <br />
+        <div *ngIf="myForm.submitted && personName.invalid" class="alert alert-danger">
+             <div *ngIf="personName.hasError('minlength')">
+                Name should contain atleast 3 characters
+            </div>
+        </div>
+    Enter mobile number : 
+        <input type="number" #mobileNumber [(ngModel)]="mobileNo" name="mobileNo" required /> <br />
+    <button type="submit">Submit</button>
+</form>

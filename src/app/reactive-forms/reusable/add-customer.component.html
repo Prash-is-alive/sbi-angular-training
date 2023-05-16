@@ -1,0 +1,14 @@
+<div class="container">
+    <form [formGroup] = "addCustomerForm" (ngSubmit)="add()">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" formControlName = "name" />
+        </div>
+        <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" class="form-control" formControlName = "email" />
+        </div>
+        <shared-address [addressForm]="address"></shared-address>
+        <button>Submit</button>
+   </form>
+</div>
