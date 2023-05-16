@@ -22,6 +22,7 @@ import { ObsExample3aComponent } from './observable/obs-example3a.component';
 import { ObsExample3bComponent } from './observable/obs-example3b.component';
 import { ParentComponent } from './parent-child/parent/parent.component';
 import { ChildComponent } from './parent-child/child/child.component';
+import { BlogPostModule } from './http/blog-post.module';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { ChildComponent } from './parent-child/child/child.component';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BlogPostModule
   ],
   providers: [],
   bootstrap: [AppComponent]
