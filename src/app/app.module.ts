@@ -20,6 +20,8 @@ import { ObsExample1Component } from './observable/obs-example1.component';
 import { ObsExample2Component } from './observable/obs-example2.component';
 import { ObsExample3aComponent } from './observable/obs-example3a.component';
 import { ObsExample3bComponent } from './observable/obs-example3b.component';
+import { ParentComponent } from './parent-child/parent/parent.component';
+import { ChildComponent } from './parent-child/child/child.component';
 
 @NgModule({
   declarations: [
@@ -40,8 +42,9 @@ import { ObsExample3bComponent } from './observable/obs-example3b.component';
     ObsExample1Component,
     ObsExample2Component,
     ObsExample3aComponent,
-    ObsExample3bComponent
-    
+    ObsExample3bComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

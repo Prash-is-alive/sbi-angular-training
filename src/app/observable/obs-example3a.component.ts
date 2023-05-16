@@ -17,7 +17,7 @@ export class ObsExample3aComponent implements OnInit {
 
   activate() {
     this.service.myEventEmitter.next(true);
-    //this.router.navigate(['obs-3b']);
+    this.router.navigate(['obs-3b']);
   }
 
 }

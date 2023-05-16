@@ -1,0 +1,15 @@
+<div class="card">
+    <img [src]="product.imgUrl" />
+    <div class="container">
+        <h4><b>{{ product.name }}</b></h4>
+        <ng-container *ngIf="editable; else justDisplay">
+            <input name="price" [(ngModel)]=product.price />
+            <button (click)="updatePrice()">Update</button>
+        </ng-container>
+        <ng-template #justDisplay>
+            <p>{{ product.price | currency:'INR' }}</p>
+        </ng-template>
+        
+        <button (click)="editPrice()">Edit Price</button>
+    </div>
+</div>

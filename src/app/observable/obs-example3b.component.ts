@@ -13,8 +13,15 @@ export class ObsExample3bComponent implements OnInit {
   constructor(private service: ObsExample3Service) { }
 
   ngOnInit(): void {
+    console.log("ngOnInit");
     this.service.myEventEmitter.subscribe(didActivate => {
+      console.log("inside subscribe1.." + didActivate)
       this.activated = didActivate;
+      console.log(this.activated);
+    })
+
+    this.service.myEventEmitter.subscribe(didActivate => {
+      console.log("inside subscribe2.." + didActivate)
     })
   }
 }

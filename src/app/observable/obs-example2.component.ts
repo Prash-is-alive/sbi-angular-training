@@ -24,21 +24,49 @@ export class ObsExample2Component implements OnInit {
       }, 1000);
     });
 
-    myObservable.pipe(map(data => {
+    /*myObservable.pipe(map(data => {
       return 'Round  ' + data;
-    }))
+    }))*/
 
+    /*const mySubscriber = myObservable.pipe(filter(data => {
+      return data as number %2 == 0;
+    }), map(data => {
+      return 'Round  ' + data;
+    }))*/
+    
+    /*const mySubscriber = myObservable.subscribe({
+        next: (data) => {
+          console.log(data);
+        },
+        error: (error) => {
+          console.log(error);
+        },
+        complete: () => {
+          console.log('completed..');
+        }
+      })*/
     const mySubscriber = myObservable.pipe(filter(data => {
       return data as number %2 == 0;
     }), map(data => {
       return 'Round  ' + data;
-    })).subscribe(data => {
+    })).subscribe({
+      next: (data) => {
+        console.log(data);
+      },
+      error: (error) => {
+        console.log(error);
+      },
+      complete: () => {
+        console.log('completed..');
+      }
+    })
+    /*subscribe(data => {
       console.log(data);
     }, error => {
       console.log(error);
     }, () => {
       console.log('completed..');
-    })
+    })*/
 
     /*const mySubscriber = myObservable.subscribe(data => {
       console.log(data);
