@@ -17,7 +17,8 @@ export class BlogPostService {
 
   storePost(postData: BlogPost) {
     this.http.post('https://majrul.free.beeceptor.com/add-post', postData, {
-      observe: 'events',
+      headers: new HttpHeaders({"Custom-Header": "123"}),  
+    observe: 'events',
       //responseType: 'json'
     })
     .pipe(tap(event => {
@@ -32,13 +33,30 @@ export class BlogPostService {
     });
   }
 
+  /*
+  {
+  "g9sd2323": {
+    "title": "Blog 1",
+    "content": "First Blog!"
+  },
+  "a349023a": {
+    "title": "Blog 2",
+    "content": "Second Blog!"
+  },
+  "b449033b": {
+    "title": "Blog 3",
+    "content": "Third Blog!"
+  }
+}
+*/
   fetchPosts() {
     return this.http
             .get<{ [key: string] : BlogPost }>('https://majrul.free.beeceptor.com/fetch-post', {
               headers: new HttpHeaders({"Custom-Header": "123"}),
-              params: new HttpParams().set('appid', '123456678980')
+              params: new HttpParams().set('appid', '12345667890')
             })
             .pipe(map(responseData => {
+              console.log(responseData);
               //const postsArray = [];
               const postsArray: BlogPost[] = [];
               for(const key in responseData) {

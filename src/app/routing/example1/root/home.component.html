@@ -1,0 +1,14 @@
+<div class="card">
+Welcome to my Website. Here you will find great offers on hot products!
+
+<div *ngFor="let product of ['iPhone 12', 'Samsung S22', 'Xiaomi 12']">
+   <app-offer [product]="product"></app-offer> 
+</div>
+
+<a routerLink="lifecycle"> Click here</a> to know more about the lifecycle of these offers
+
+<div *ngFor="let msg of ['Hello', 'Hi', 'Welcome']">
+   <app-lifecycle [something]="msg"></app-lifecycle>
+</div>
+
+</div>

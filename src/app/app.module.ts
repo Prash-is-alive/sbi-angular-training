@@ -23,6 +23,7 @@ import { ObsExample3bComponent } from './observable/obs-example3b.component';
 import { ParentComponent } from './parent-child/parent/parent.component';
 import { ChildComponent } from './parent-child/child/child.component';
 import { BlogPostModule } from './http/blog-post.module';
+import { CustomerInfoComponent } from './customer-info/customer-info.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { BlogPostModule } from './http/blog-post.module';
     ObsExample3aComponent,
     ObsExample3bComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    CustomerInfoComponent
   ],
   imports: [
     BrowserModule,

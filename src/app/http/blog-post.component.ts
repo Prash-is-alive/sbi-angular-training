@@ -7,7 +7,7 @@ import { BlogPost } from './blog-post.model';
 import { BlogPostService } from './blog-post.service';
 
 @Component({
-  selector: 'app-blog-post',
+  selector: 'blog-post',
   templateUrl: './blog-post.component.html',
   styleUrls: ['./blog-post.component.css']
 })
@@ -35,6 +35,7 @@ export class BlogPostComponent implements OnInit, OnDestroy {
         this.isFetching = false;
       },
       error: (error) => {
+        console.log(error);
         this.error = error.message;
       }
     })
