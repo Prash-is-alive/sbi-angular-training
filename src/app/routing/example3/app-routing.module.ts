@@ -15,14 +15,17 @@ import { UsersComponent } from './users/users.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'servers', canActivateChild: [AuthGuard]/*canActivate: [AuthGuard]*/, component: ServersComponent,  children: [
+  { path: 'servers', canActivateChild: [AuthGuard]/*canActivate: [AuthGuard]*/, component: ServersComponent,  
+    children: [
     //{ path: ':id', component: ServerComponent },
+    //http://localhost:4200/servers/1
     {path: ':id', component: ServerComponent2, resolve: {server: FetchServerResolver }},
+    //http://localhost:4200/servers/1/edit
     { path: ':id/edit', component: EditServerComponent, canDeactivate: [WarnUserGuard] }
   ] },
   //{ path: 'servers/:id', component: ServerComponent },
   { path: 'users', component: UsersComponent },
-  { path: 'users/:id/:name', component: UserComponent },
+  { path: 'users/:id/:name', component: UserComponent }, //children
   { path: 'not-found', component: PageNotFoundComponent },
   { path: 'something', redirectTo: '/not-found' },
   { path: 'error', component: ErrorPageComponent, data: {message: 'Something went wrong!'} },
