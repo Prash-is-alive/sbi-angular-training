@@ -1,0 +1,13 @@
+<button (click)="showOrders = true">Click here</button> to view your Order History
+
+<div *ngIf="showOrders">
+    <div *ngFor="let order of orders">
+        <div class="card">
+            <div>Order ID <span>{{ order.orderId }}</span></div>
+            <div>Order Amount <span>{{ order.amount }}</span></div>
+            <div>Order Date <span>{{ order.date | date:'dd/MM/yyyy h:mm a' }}</span></div>
+            <div>Order Status <span>{{ order.status }}</span></div>
+            <div><button (click) = "processCancellation(order.orderId)">Cancel This Order</button></div>
+        </div>
+    </div>
+</div>

@@ -24,6 +24,21 @@ import { ParentComponent } from './parent-child/parent/parent.component';
 import { ChildComponent } from './parent-child/child/child.component';
 import { BlogPostModule } from './http/blog-post.module';
 import { CustomerInfoComponent } from './customer-info/customer-info.component';
+import { CalculatorComponent } from './testing/calculator/calculator.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
+import { MatProgressBarModule } from '@angular/material/progress-bar'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialExample1Component } from './material/example1/material-example1.component';
+import { AlertComponent } from './material/alert.component';
+import { Example2Component } from './material/example2/example2.component';
+import { Example3Component } from './material/example3/example3.component';
+import { AnimationComponent } from './animations/animation.component';
 
 @NgModule({
   declarations: [
@@ -47,14 +62,31 @@ import { CustomerInfoComponent } from './customer-info/customer-info.component';
     ObsExample3bComponent,
     ParentComponent,
     ChildComponent,
-    CustomerInfoComponent
+    CustomerInfoComponent,
+    CalculatorComponent,
+    MaterialExample1Component,
+    Example2Component,
+    Example3Component,
+    AlertComponent,
+    Example2Component,
+    Example3Component,
+    AnimationComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    BlogPostModule
+    BlogPostModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatCardModule,
+    MatDialogModule,
+    MatIconModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

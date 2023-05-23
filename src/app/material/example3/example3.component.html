@@ -1,0 +1,12 @@
+<mat-card>
+	<div class="file">
+		<p>Download File</p>
+		<button (click)="download()" mat-raised-button color="primary">Download</button>
+	</div>
+	<mat-progress-bar *ngIf="download$"
+		[mode]="download$.state == 'IN_PROGRESS' ? 'buffer' : 'determinate'" 
+    [value]="download$.progress">
+		{{ download$.progress }}
+	</mat-progress-bar>
+
+</mat-card>
