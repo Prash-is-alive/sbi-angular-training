@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TemplateExample2Component } from './template-driven-forms/template-example2.component';
 import { TemplateExample3Component } from './template-driven-forms/template-example3.component';
 import { PasswordMatchValidator } from './template-driven-forms/custom-validator';
+import { CustomEmailValidator } from './template-driven-forms/custom-validator';
 import { ReactiveExample1Component } from './reactive-forms/reactive-example1.component';
 import { ReactiveExample2Component } from './reactive-forms/reactive-example2.component';
 import { ReactiveExample3Component } from './reactive-forms/reactive-example3.component';
@@ -47,6 +48,7 @@ import { AnimationComponent } from './animations/animation.component';
     TemplateExample2Component,
     TemplateExample3Component,
     PasswordMatchValidator,
+    CustomEmailValidator,
     ReactiveExample1Component,
     ReactiveExample2Component,
     ReactiveExample3Component,
